@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.ashwanth.pages.CRMLogin;
+import com.ashwanth.pages.FormSelection;
 
 
 public class Test_1_CRMLogin {
@@ -26,6 +27,8 @@ public class Test_1_CRMLogin {
 	     
 	     driver.manage().window().maximize();	 
 	}
+	
+	/*
     @Test
 	public void Login() {
 		   
@@ -47,9 +50,12 @@ public class Test_1_CRMLogin {
 	     
 	     CRMLogin.WaitForElement(driver);
 
-	     CRMLogin.CloseDriver(driver);
+	     FormSelection.account_selection(driver).click();
+	     
+	     CRMLogin.Wait(driver);
 	 
-	     }
+	     } */
+    
     
     @Test
     public void Login1() {
@@ -74,6 +80,6 @@ public class Test_1_CRMLogin {
 
 	     CRMLogin.CloseDriver(driver);
 	 
-	     }
+	     } 
     
 }

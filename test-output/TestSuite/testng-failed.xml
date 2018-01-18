@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]">
+  <test name="CRM TEST(failed)">
+    <classes>
+      <class name="com.ashwanth.tests.Test_1_CRMLogin">
+        <methods>
+          <include name="Login"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- com.ashwanth.tests.Test_1_CRMLogin -->
+    </classes>
+  </test> <!-- CRM TEST(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
