@@ -3,7 +3,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ashwanth.pages.CRMLogin;
@@ -15,7 +17,7 @@ public class Test_1_CRMLogin {
 	WebDriver driver;
 	
 	
-	@BeforeMethod
+@BeforeMethod
 	public void LaunchBrowser() {
 		
 		 System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); //Setting up chrome driver
@@ -30,7 +32,7 @@ public class Test_1_CRMLogin {
 	
 	/*
     @Test
-	public void Login() {
+	public void Login1() {
 		   
 	     CRMLogin.txtbx_UserName(driver).sendKeys("bde1@sensiple4.onmicrosoft.com");
 	     
@@ -57,8 +59,8 @@ public class Test_1_CRMLogin {
 	     } */
     
     
-    @Test
-    public void Login1() {
+   @Test
+    public void Login() {
 		   
 	     CRMLogin.txtbx_UserName(driver).sendKeys("bde1@sensiple4.onmicrosoft.com");
 	     
@@ -78,15 +80,20 @@ public class Test_1_CRMLogin {
 	     
 	     CRMLogin.WaitForElement(driver);
 	     
-	     FormSelection.sales_selection(driver).click();
-	 
+	     
+	     } 
+    
+   @AfterTest
+    public void Account_Page()
+    {
+    	 FormSelection.sales_selection(driver).click();
+   	 
 	     FormSelection.account_selection(driver).click();
 	     
-	     CRMLogin.Wait(driver);
-	     
+	     CRMLogin.WaitForElement1(driver);
+	       
 	     FormSelection.click_new(driver).click();
 	     
 	     CRMLogin.Wait(driver);
-	     } 
-    
+    }
 }

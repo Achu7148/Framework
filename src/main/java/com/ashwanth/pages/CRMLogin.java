@@ -78,4 +78,20 @@ public static void Wait(WebDriver driver){
 
     }
 
+//Wait for 50 seconds
+public static void Wait1(WebDriver driver){
+	 
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+    }
+
+//Wait for element(+New)
+public static WebElement WaitForElement1(WebDriver driver){
+	 
+	WebDriverWait wait = new WebDriverWait(driver, 30);
+	
+	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ms-crm-Menu-Label")));
+ 
+         }
+
 }
