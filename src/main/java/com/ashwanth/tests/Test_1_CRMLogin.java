@@ -77,9 +77,16 @@ public class Test_1_CRMLogin {
 	     CRMLogin.btn_No(driver).click();
 	     
 	     CRMLogin.WaitForElement(driver);
-
-	     CRMLogin.CloseDriver(driver);
+	     
+	     FormSelection.sales_selection(driver).click();
 	 
+	     FormSelection.account_selection(driver).click();
+	     
+	     CRMLogin.Wait(driver);
+	     
+	     FormSelection.click_new(driver).click();
+	     
+	     CRMLogin.Wait(driver);
 	     } 
     
 }
