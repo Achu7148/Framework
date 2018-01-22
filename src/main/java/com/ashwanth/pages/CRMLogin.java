@@ -55,7 +55,7 @@ public class CRMLogin {
  
          }
      
-     //wait for element present
+     //wait for element present(... icon near user profile)
 public static WebElement WaitForElement(WebDriver driver){
 		 
 	WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -91,6 +91,15 @@ public static WebElement WaitForElement1(WebDriver driver){
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	
 	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ms-crm-Menu-Label")));
+ 
+         }
+
+//wait for elemnt(Save & Close Button)
+public static WebElement WaitForElement2(WebDriver driver){
+	 
+	WebDriverWait wait = new WebDriverWait(driver, 30);
+	
+	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Parent Account_label")));
  
          }
 

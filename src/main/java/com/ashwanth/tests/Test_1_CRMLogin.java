@@ -5,12 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ashwanth.pages.CRMLogin;
 import com.ashwanth.pages.FormSelection;
-
+import com.ashwanth.pages.ContactPage;
 
 public class Test_1_CRMLogin {
 	
@@ -95,6 +94,11 @@ public class Test_1_CRMLogin {
 	     FormSelection.click_new(driver).click();
 	     
 	     CRMLogin.Wait(driver);
+	     
+	     CRMLogin.WaitForElement2(driver);
+	     
+	     ContactPage.txtbx_AccName(driver).sendKeys("Ashwanth");
+	     
 	     
 	     
     }

@@ -25,7 +25,7 @@ public class FormSelection {
     //Click "+" icon
     public static WebElement click_new(WebDriver driver){
 		
-		return element = driver.findElement(By.className("ms-crm-Menu-Label"));
+		return element = driver.findElement(By.className("ms-crm-InlineEditLabelText"));
 		
         }
 
