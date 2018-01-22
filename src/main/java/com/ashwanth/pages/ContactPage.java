@@ -7,9 +7,18 @@ public class ContactPage {
 
 	private static WebElement element = null;
 	
-	public static WebElement txtbx_AccName(WebDriver driver){
+	
+	public static WebElement select_AccName(WebDriver driver){
 		 
-        element = driver.findElement(By.id("name"));
+        element = driver.findElement(By.xpath("//label[@id='Account Name_label']"));
+
+        return element;
+
+        }
+	
+	public static WebElement txbx_AccName(WebDriver driver){
+		 
+        element = driver.findElement(By.id("name_i"));
 
         return element;
 
@@ -17,7 +26,7 @@ public class ContactPage {
 	
 	public static WebElement txtbx_CntryName(WebDriver driver){
 		 
-        Select element = new Select(driver.findElement(By.className("ms-crm-Inline-Value ms-crm-Inline-HasError")));
+        Select element = new Select(driver.findElement(By.xpath("dghgd")));
 
         element.selectByVisibleText("Albania");
 		

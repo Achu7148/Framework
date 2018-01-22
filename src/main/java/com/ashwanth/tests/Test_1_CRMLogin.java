@@ -39,7 +39,7 @@ public class Test_1_CRMLogin {
 	     
 	     CRMLogin.Wait(driver);
 	 
-	     CRMLogin.txtbx_Password(driver).sendKeys("Sensiple@2017");
+	     CRMLogin.txtbx_Password(driver).sendKeys("Sensible@2017");
 	     
 	     CRMLogin.Wait(driver);
 	     
@@ -95,9 +95,9 @@ public class Test_1_CRMLogin {
 	     
 	     CRMLogin.WaitForElement2(driver);
 	     
-	     ContactPage.txtbx_AccName(driver).sendKeys("Ashwanth");
+	     ContactPage.select_AccName(driver).click();
 	     
-	     
-	     
+	     ContactPage.txbx_AccName(driver).sendKeys("Ashwanth");
+	       
     }
 }

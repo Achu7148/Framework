@@ -99,7 +99,7 @@ public static WebElement WaitForElement2(WebDriver driver){
 	 
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	
-	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Parent Account_label")));
+	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@id='Account Name_label']")));
  
          }
 
