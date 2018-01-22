@@ -90,11 +90,11 @@ public static WebElement WaitForElement1(WebDriver driver){
 	 
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	
-	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ms-crm-Menu-Label")));
+	 return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.account.NewRecord")));
  
          }
 
-//wait for elemnt(Save & Close Button)
+//wait for element(Save & Close Button)
 public static WebElement WaitForElement2(WebDriver driver){
 	 
 	WebDriverWait wait = new WebDriverWait(driver, 30);

@@ -93,8 +93,6 @@ public class Test_1_CRMLogin {
 	       
 	     FormSelection.click_new(driver).click();
 	     
-	     CRMLogin.Wait(driver);
-	     
 	     CRMLogin.WaitForElement2(driver);
 	     
 	     ContactPage.txtbx_AccName(driver).sendKeys("Ashwanth");

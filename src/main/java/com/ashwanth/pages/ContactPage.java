@@ -9,7 +9,7 @@ public class ContactPage {
 	
 	public static WebElement txtbx_AccName(WebDriver driver){
 		 
-        element = driver.findElement(By.id("name_i"));
+        element = driver.findElement(By.id("name"));
 
         return element;
 
@@ -17,7 +17,7 @@ public class ContactPage {
 	
 	public static WebElement txtbx_CntryName(WebDriver driver){
 		 
-        Select element = new Select(driver.findElement(By.id("new_country_i")));
+        Select element = new Select(driver.findElement(By.className("ms-crm-Inline-Value ms-crm-Inline-HasError")));
 
         element.selectByVisibleText("Albania");
 		
