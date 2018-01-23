@@ -10,13 +10,14 @@ import org.testng.annotations.Test;
 import com.ashwanth.pages.CRMLogin;
 import com.ashwanth.pages.FormSelection;
 import com.ashwanth.pages.ContactPage;
+import com.ashwanth.commonmethods.*;
 
 public class Test_1_CRMLogin {
 	
 	WebDriver driver;
 	
 	
-@BeforeMethod
+	/*
 	public void LaunchBrowser() {
 		
 		 System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); //Setting up chrome driver
@@ -29,7 +30,7 @@ public class Test_1_CRMLogin {
 	     driver.manage().window().maximize();	 
 	}
 	
-	/*
+	
     @Test
 	public void Login1() {
 		   
@@ -60,7 +61,12 @@ public class Test_1_CRMLogin {
     
    @Test
     public void Login() {
-		   
+	   
+	     
+	SeleniumCommands.fn_LaunchBrowser("CH");
+	
+	SeleniumCommands.fn_OpenURL("https://sensiple-dev.crm.dynamics.com/");
+	
 	     CRMLogin.txtbx_UserName(driver).sendKeys("bde1@sensiple4.onmicrosoft.com");
 	     
 	     CRMLogin.btn_Next(driver).click();
