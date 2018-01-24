@@ -1,10 +1,15 @@
 package com.ashwanth.tests;
+
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ashwanth.pages.CRMLogin;
@@ -17,9 +22,14 @@ public class Test_1_CRMLogin {
 	WebDriver driver;
 	
 	
-	/*
+	@BeforeMethod
 	public void LaunchBrowser() {
+	
 		
+	     SeleniumCommands.fn_LaunchBrowser("CH");
+	
+	     SeleniumCommands.fn_OpenURL("https://sensiple-dev.crm.dynamics.com/");
+	     /*
 		 System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); //Setting up chrome driver
 		 driver = new ChromeDriver();  
 		 
@@ -27,11 +37,11 @@ public class Test_1_CRMLogin {
 
 	     driver.get("https://sensiple-dev.crm.dynamics.com/");
 	     
-	     driver.manage().window().maximize();	 
+	     driver.manage().window().maximize(); 	 */
 	}
 	
 	
-    @Test
+    /*
 	public void Login1() {
 		   
 	     CRMLogin.txtbx_UserName(driver).sendKeys("bde1@sensiple4.onmicrosoft.com");
@@ -40,7 +50,7 @@ public class Test_1_CRMLogin {
 	     
 	     CRMLogin.Wait(driver);
 	 
-	     CRMLogin.txtbx_Password(driver).sendKeys("Sensible@2017");
+	     CRMLogin.txtbx_Password(driver).sendKeys("Sensiple@2017");
 	     
 	     CRMLogin.Wait(driver);
 	     
@@ -58,15 +68,13 @@ public class Test_1_CRMLogin {
 	 
 	     } */
     
-    
+   
    @Test
-    public void Login() {
+    public void Login()throws NullPointerException {
 	   
 	     
-	SeleniumCommands.fn_LaunchBrowser("CH");
-	
-	SeleniumCommands.fn_OpenURL("https://sensiple-dev.crm.dynamics.com/");
-	
+	   
+	     
 	     CRMLogin.txtbx_UserName(driver).sendKeys("bde1@sensiple4.onmicrosoft.com");
 	     
 	     CRMLogin.btn_Next(driver).click();
@@ -88,7 +96,7 @@ public class Test_1_CRMLogin {
 	     
 	     } 
     
-   @AfterTest
+   /*
     public void Account_Page()
     {
     	 FormSelection.sales_selection(driver).click();
@@ -105,5 +113,5 @@ public class Test_1_CRMLogin {
 	     
 	     ContactPage.txbx_AccName(driver).sendKeys("Ashwanth");
 	       
-    }
+    }*/
 }

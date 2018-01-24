@@ -44,7 +44,7 @@ System.setProperty("webdriver.ie.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\
 driver= new InternetExplorerDriver();
 }
 
-driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 return driver;
 }
 }
