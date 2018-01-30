@@ -33,11 +33,6 @@ public class ContactPage {
 			Thread.sleep(1000);
 			System.out.println("Step-1");
 
-			// Actions action = new Actions(driver);
-			// WebElement element =
-			// driver.findElement(By.xpath("//select[@id='new_country_i']"));
-			// action.doubleClick(element).perform();
-
 			Select element1 = new Select(driver.findElement(By.xpath("//select[@id='new_country_i']")));
 			element1.selectByVisibleText("Albania");
 			Thread.sleep(2000);
@@ -48,11 +43,83 @@ public class ContactPage {
 		return element;
 	}
 	
- public static WebElement txbx_State(WebDriver driver){
-		 
-        element = driver.findElement(By.id("new_state_i"));
+		
+	//State text box hover
+ public static WebElement txbx_State(WebDriver driver) throws InterruptedException{
+	 boolean statehover = driver.findElement(By.xpath("//*[@id='new_state']/div[1]")).isEnabled();
+		if (statehover == true) {
+			WebElement element = driver.findElement(By.xpath("//*[@id='new_state']/div[1]"));
 
-        return element;
+			Actions action = new Actions(driver);
 
-        }
+			action.moveToElement(element).build().perform();
+			action.click();
+
+			driver.findElement(By.xpath("//*[@id='new_state']/div[1]")).click();
+			Thread.sleep(1000);
+			System.out.println("Step-2");			
+			Thread.sleep(2000);
+		} else 
+		{
+			System.out.println("object is not present");
+		}
+		return element;
+        
+      
+ }
+ 
+ //State text box
+ public static WebElement hiddentxbx_State(WebDriver driver) throws InterruptedException{
+	 
+		element = driver.findElement(By.xpath("//*[@id='new_state_i']"));;
+			Thread.sleep(2000);
+			return element;
 }
+ 
+ 
+ // Zip code hover                                            
+ public static WebElement txbx_Zipcode(WebDriver driver) throws InterruptedException{
+	 boolean zipcodehover = driver.findElement(By.xpath("//*[@id='new_zipcode']/div")).isEnabled();
+		if (zipcodehover == true) {
+			WebElement element = driver.findElement(By.xpath("//*[@id='new_zipcode']/div"));
+
+			Actions action = new Actions(driver);
+
+			action.moveToElement(element).build().perform();
+			action.click();
+
+			driver.findElement(By.xpath("//*[@id='new_zipcode']/div")).click();
+			Thread.sleep(1000);
+			System.out.println("Step-2");			
+			Thread.sleep(2000);
+		} else 
+		{
+			System.out.println("object is not present");
+		}
+		return element;
+        
+      
+ }
+ 
+ //Zip code text box
+ public static WebElement hiddentxbx_Zipcode(WebDriver driver) throws InterruptedException{
+	 
+		element = driver.findElement(By.xpath("//*[@id='new_zipcode_i']"));;
+			Thread.sleep(2000);
+			return element;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}
+
+

@@ -86,9 +86,16 @@ public class Test_2_CRMLogin {
 		
 		ContactPage.txtbx_CntryName(driver);
 		
+		Thread.sleep(2000);
 		
+		ContactPage.txbx_State(driver);
 		
+		ContactPage.hiddentxbx_State(driver).sendKeys("TamilNadu");
 		
+		Thread.sleep(1000);
 		
+        ContactPage.txbx_Zipcode(driver);
+		
+		ContactPage.hiddentxbx_Zipcode(driver).sendKeys("123456");
 	}
 }
