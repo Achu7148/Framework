@@ -102,7 +102,7 @@ public class ContactPage {
  }
  
  //Zip code text box
- public static WebElement hiddentxbx_Zipcode(WebDriver driver) throws InterruptedException{
+ public static WebElement hiddentxbx_Address(WebDriver driver) throws InterruptedException{
 	 
 		element = driver.findElement(By.xpath("//*[@id='new_zipcode_i']"));;
 			Thread.sleep(2000);
@@ -110,7 +110,38 @@ public class ContactPage {
 }
  
  
- 
+
+//Address hover                                            
+public static WebElement txbx_Address(WebDriver driver) throws InterruptedException{
+	 boolean addresshover = driver.findElement(By.xpath("//*[@id='new_address']/div[2]")).isEnabled();
+		if (addresshover == true) {
+			WebElement element = driver.findElement(By.xpath("//*[@id='new_address']/div[2]"));
+
+			Actions action = new Actions(driver);
+
+			action.moveToElement(element).build().perform();
+			action.click();
+
+			driver.findElement(By.xpath("//*[@id='new_address']/div[2]")).click();
+			Thread.sleep(1000);
+			System.out.println("Step-2");			
+			Thread.sleep(2000);
+		} else 
+		{
+			System.out.println("object is not present");
+		}
+		return element;
+      
+    
+}
+
+//Address text box
+public static WebElement hiddentxbx_Zipcode(WebDriver driver) throws InterruptedException{
+	 
+		element = driver.findElement(By.xpath("//*[@id='new_address_i']"));;
+			Thread.sleep(2000);
+			return element;
+}
  
  
  
