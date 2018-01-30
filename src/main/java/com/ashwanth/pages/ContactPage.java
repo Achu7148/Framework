@@ -10,7 +10,6 @@ public class ContactPage {
 	
 	public static WebElement txbx_AccName(WebDriver driver){
 		 
-		
         element = driver.findElement(By.id("name_i"));
 
         return element;
@@ -27,5 +26,11 @@ public class ContactPage {
 
         }
 	
-	
+ public static WebElement txbx_State(WebDriver driver){
+		 
+        element = driver.findElement(By.id("new_state_i"));
+
+        return element;
+
+        }
 }

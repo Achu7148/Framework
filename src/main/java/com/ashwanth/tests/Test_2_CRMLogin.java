@@ -77,7 +77,11 @@ public class Test_2_CRMLogin {
 	     
 	     ContactPage.txbx_AccName(driver).sendKeys("Ashwanth");
 	     
-	     ContactPage.txtbx_CntryName(driver).isSelected();
+	    // ContactPage.txtbx_CntryName(driver).click();
+	     
+	     
+	     ContactPage.txbx_State(driver).isSelected();
 	       
+	     ContactPage.txbx_State(driver).sendKeys("Tamilnadu");
     }
 }
