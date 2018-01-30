@@ -16,14 +16,14 @@ import com.ashwanth.pages.CRMLogin;
 import com.ashwanth.pages.FormSelection;
 import com.ashwanth.pages.ContactPage;
 
-public class Test_1_CRMLogin {
+public class Test_2_CRMLogin {
 	
 	WebDriver driver;
 	
 	
 	@BeforeMethod
 	public void LaunchBrowser() {
-     
+	     
 		 System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); //Setting up chrome driver
 		 driver = new ChromeDriver();  
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -62,7 +62,8 @@ public class Test_1_CRMLogin {
    @AfterTest
     public void Account_Page()
     {
-    	 FormSelection.sales_selection(driver).click();
+    	
+	     FormSelection.sales_selection(driver).click();
    	 
 	     FormSelection.account_selection(driver).click();
 	     
@@ -75,6 +76,8 @@ public class Test_1_CRMLogin {
 	     CRMLogin.WaitForElement2(driver);
 	     
 	     ContactPage.txbx_AccName(driver).sendKeys("Ashwanth");
+	     
+	     ContactPage.txtbx_CntryName(driver).isSelected();
 	       
     }
 }

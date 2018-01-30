@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,7 +12,9 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumCommands{
 	
 	static WebDriver driver;
-	
+
+
+@BeforeSuite
 public static WebDriver OpenApp(String BrowserName, String url){
 fn_LaunchBrowser(BrowserName);
 fn_OpenURL(url);
@@ -48,3 +51,5 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 return driver;
 }
 }
+
+
