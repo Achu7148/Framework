@@ -429,6 +429,30 @@ public static WebElement hiddentxbx_Address(WebDriver driver) throws Interrupted
 							Thread.sleep(2000);
 							return element;
 				}
+			
+				//Primary account Owner
+				public static WebElement txtbx_AccOwner(WebDriver driver) throws InterruptedException{
+					 
+					boolean Primaryaccountowner = driver.findElement(By.xpath("//*[@id='new_primaryaccountowner_i']")).isEnabled();
+					if (Primaryaccountowner == true) {
+						WebElement element = driver.findElement(By.xpath("//*[@id='new_primaryaccountowner_i']"));
+
+						Actions action = new Actions(driver);
+
+						action.moveToElement(element).build().perform();
+						action.click();
+
+						driver.findElement(By.xpath("//*[@id='new_primaryaccountowner_i']")).click();
+						Thread.sleep(1000);
+
+						Select element1 = new Select(driver.findElement(By.id("new_businesstype_i")));
+						element1.selectByVisibleText("Company");
+						Thread.sleep(2000);
+					} else 
+					{
+						System.out.println("object is not present");
+					}
+					return element;
 				
 }
 
