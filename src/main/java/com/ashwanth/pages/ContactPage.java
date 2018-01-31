@@ -315,7 +315,121 @@ public static WebElement hiddentxbx_Address(WebDriver driver) throws Interrupted
 				}
 
  
+				//Revenue Range Drop down
+				public static WebElement txtbx_RevenueRange(WebDriver driver) throws InterruptedException{
+					 
+					boolean RevenuerangeDropdown = driver.findElement(By.xpath("//*[@id='new_revenuerange']/div[1]")).isEnabled();
+					if (RevenuerangeDropdown == true) {
+						WebElement element = driver.findElement(By.xpath("//*[@id='new_revenuerange']/div[1]"));
+
+						Actions action = new Actions(driver);
+
+						action.moveToElement(element).build().perform();
+						action.click();
+
+						driver.findElement(By.xpath("//*[@id='new_revenuerange']/div[1]")).click();
+						Thread.sleep(1000);
+
+						Select element1 = new Select(driver.findElement(By.id("new_revenuerange_i")));
+						element1.selectByVisibleText("50 -100 Million");
+						Thread.sleep(2000);
+					} else 
+					{
+						System.out.println("object is not present");
+					}
+					return element;
+				}
  
+				
+				//Establishment year text box hover                                            
+				public static WebElement txbx_EstYr(WebDriver driver) throws InterruptedException{
+					 boolean estyr = driver.findElement(By.xpath("//*[@id='new_establishmentyear']/div[1]")).isEnabled();
+						if (estyr == true) {
+							WebElement element = driver.findElement(By.xpath("//*[@id='new_establishmentyear']/div[1]"));
+
+							Actions action = new Actions(driver);
+
+							action.moveToElement(element).build().perform();
+							action.click();
+
+							driver.findElement(By.xpath("//*[@id='new_establishmentyear']/div[1]")).click();
+							Thread.sleep(1000);
+							System.out.println("Step-2");			
+							Thread.sleep(2000);
+						} else 
+						{
+							System.out.println("object is not present");
+						}
+						return element;
+				      
+				    
+				}
+
+				//Establishment Year text box
+				public static WebElement hiddentxbx_EstYr(WebDriver driver) throws InterruptedException{
+					 
+						element = driver.findElement(By.id("new_establishmentyear_i"));;
+							Thread.sleep(2000);
+							return element;
+				}
+				
+				//Business Type Drop down
+				public static WebElement txtbx_BusinessType(WebDriver driver) throws InterruptedException{
+					 
+					boolean BusinesstypeDropdown = driver.findElement(By.xpath("//*[@id='new_businesstype']/div[1]")).isEnabled();
+					if (BusinesstypeDropdown == true) {
+						WebElement element = driver.findElement(By.xpath("//*[@id='new_businesstype']/div[1]"));
+
+						Actions action = new Actions(driver);
+
+						action.moveToElement(element).build().perform();
+						action.click();
+
+						driver.findElement(By.xpath("//*[@id='new_businesstype']/div[1]")).click();
+						Thread.sleep(1000);
+
+						Select element1 = new Select(driver.findElement(By.id("new_businesstype_i")));
+						element1.selectByVisibleText("Company");
+						Thread.sleep(2000);
+					} else 
+					{
+						System.out.println("object is not present");
+					}
+					return element;
+				}
+			
+				////Number of Legal Entities Text Box hover                                           
+				public static WebElement txbx_LegalEnt(WebDriver driver) throws InterruptedException{
+					 boolean legent = driver.findElement(By.xpath("//*[@id='new_legalentities']/div[1]")).isEnabled();
+						if (legent == true) {
+							WebElement element = driver.findElement(By.xpath("//*[@id='new_legalentities']/div[1]"));
+
+							Actions action = new Actions(driver);
+
+							action.moveToElement(element).build().perform();
+							action.click();
+
+							driver.findElement(By.xpath("//*[@id='new_legalentities']/div[1]")).click();
+							Thread.sleep(1000);
+							System.out.println("Step-2");			
+							Thread.sleep(2000);
+						} else 
+						{
+							System.out.println("object is not present");
+						}
+						return element;
+				      
+				    
+				}
+
+				//Number of Legal Entities Text Box 
+				public static WebElement hiddentxbx_LegalEnt(WebDriver driver) throws InterruptedException{
+					 
+						element = driver.findElement(By.id("new_legalentities_i"));;
+							Thread.sleep(2000);
+							return element;
+				}
+				
 }
 
 

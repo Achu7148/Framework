@@ -114,5 +114,16 @@ public class Test_2_CRMLogin {
 		
 		ContactPage.txtbx_CompanySize(driver);
 		
+		ContactPage.txtbx_RevenueRange(driver);
+		
+        ContactPage.txbx_EstYr(driver);
+		
+		ContactPage.hiddentxbx_EstYr(driver).sendKeys("1980");
+		
+		ContactPage.txtbx_BusinessType(driver);
+		
+		ContactPage.txbx_LegalEnt(driver);
+			
+		ContactPage.hiddentxbx_LegalEnt(driver).sendKeys("15");
 	}
 }
