@@ -91,18 +91,28 @@ public class Test_2_CRMLogin {
 		ContactPage.txbx_State(driver);
 		
 		ContactPage.hiddentxbx_State(driver).sendKeys("TamilNadu");
-		
-		Thread.sleep(1000);
-		
+
         ContactPage.txbx_Zipcode(driver);
 		
 		ContactPage.hiddentxbx_Zipcode(driver).sendKeys("123456");
-		
-		Thread.sleep(1000);
-		
+	
         ContactPage.txbx_Address(driver);
 		
 		ContactPage.hiddentxbx_Address(driver).sendKeys("USA1234");
+		
+		ContactPage.txtbx_Territory(driver);
+		
+        ContactPage.txbx_Website(driver);
+		
+		ContactPage.hiddentxbx_Website(driver).sendKeys("www.usa.com");
+		
+        ContactPage.txbx_Phone(driver);
+		
+		ContactPage.hiddentxbx_Phone(driver).sendKeys("1234567890");
+	
+		ContactPage.txtbx_Industry(driver);
+		
+		ContactPage.txtbx_CompanySize(driver);
 		
 	}
 }
