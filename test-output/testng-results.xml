@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="133473" started-at="2018-01-31T08:55:07Z" finished-at="2018-01-31T08:57:21Z">
+  <suite name="Default suite" duration-ms="118978" started-at="2018-02-01T13:33:49Z" finished-at="2018-02-01T13:35:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="133473" started-at="2018-01-31T08:55:07Z" finished-at="2018-01-31T08:57:21Z">
+    <test name="Default test" duration-ms="118978" started-at="2018-02-01T13:33:49Z" finished-at="2018-02-01T13:35:48Z">
       <class name="com.ashwanth.tests.Test_2_CRMLogin">
-        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="LaunchBrowser" is-config="true" duration-ms="10388" started-at="2018-01-31T14:25:08Z" finished-at="2018-01-31T14:25:18Z">
+        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="LaunchBrowser" is-config="true" duration-ms="8277" started-at="2018-02-01T19:03:49Z" finished-at="2018-02-01T19:03:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="Login" duration-ms="27558" started-at="2018-01-31T14:25:18Z" finished-at="2018-01-31T14:25:45Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="Login" duration-ms="31194" started-at="2018-02-01T19:03:57Z" finished-at="2018-02-01T19:04:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="Account_Page()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="Account_Page" is-config="true" duration-ms="95488" started-at="2018-01-31T14:25:45Z" finished-at="2018-01-31T14:27:21Z">
+        <test-method status="PASS" signature="Account_Page()[pri:0, instance:com.ashwanth.tests.Test_2_CRMLogin@887af79]" name="Account_Page" is-config="true" duration-ms="79487" started-at="2018-02-01T19:04:28Z" finished-at="2018-02-01T19:05:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Account_Page -->
