@@ -17,17 +17,11 @@ public class Test_2_CRMLogin {
 
 	@BeforeMethod
 	public void LaunchBrowser() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); // Setting
-//																													// up
-//																													// chrome
-//																													// driver
+		
+// Setting up driver
+		System.setProperty("webdriver.chrome.driver", "C:\\workspace\\qvsbatch1\\SelDrivers\\chromedriver.exe"); 																										// up chromedriver
 		driver = new ChromeDriver();
-		//System.setProperty("webdriver.gecko.driver", "C:\\workspace\\Framework\\SeleniumDrivers\\FirefoxDriver.exe");
-		//WebDriver driver = new FirefoxDriver();
-        //driver = new FirefoxDriver();
-		
-		
+	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get("https://sensiple-dev.crm.dynamics.com/");
@@ -75,7 +69,7 @@ public class Test_2_CRMLogin {
 		
 		Thread.sleep(1000);
 		
-		ContactPage.txbx_AccName(driver).sendKeys("Ashwanth");
+		ContactPage.txbx_AccName(driver).sendKeys("Ashwanthk");
 		
 		ContactPage.txtbx_CntryName(driver);
 		
