@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.ashwanth.commonmethods.CommonMethods;
 import com.ashwanth.pages.CRMLogin;
 import com.ashwanth.pages.FormSelection;
 import com.ashwanth.pages.ContactPage;
@@ -120,5 +121,6 @@ public class Test_2_CRMLogin {
 		driver.switchTo().defaultContent();
 		
 		FormSelection.click_SaveandClose(driver).click();
+		
 	}
 }
