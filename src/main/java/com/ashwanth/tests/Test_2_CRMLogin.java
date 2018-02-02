@@ -1,19 +1,10 @@
 package com.ashwanth.tests;
 
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ashwanth.pages.CRMLogin;
@@ -124,8 +115,16 @@ public class Test_2_CRMLogin {
 		
 		ContactPage.txtbx_BusinessType(driver);
 		
+        ContactPage.txbx_PrimAcc(driver);
+		
+		ContactPage.hiddentxbx_PrimAcc(driver).sendKeys("gs1");
+		
 		ContactPage.txbx_LegalEnt(driver);
 			
 		ContactPage.hiddentxbx_LegalEnt(driver).sendKeys("15");
+		
+		driver.switchTo().defaultContent();
+		
+		FormSelection.click_SaveandClose(driver).click();
 	}
 }

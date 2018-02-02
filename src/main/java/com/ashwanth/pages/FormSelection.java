@@ -27,4 +27,13 @@ public class FormSelection {
 		
         }
 
+    
+ public static WebElement click_SaveandClose(WebDriver driver){
+		
+		return element = driver.findElement(By.id("account|NoRelationship|Form|Mscrm.Form.account.SaveAndClose"));
+		
+        }
+    
+    
+    
 }

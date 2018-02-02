@@ -453,6 +453,42 @@ public static WebElement hiddentxbx_Address(WebDriver driver) throws Interrupted
 						System.out.println("object is not present");
 					}
 					return element;
+				}
+					
+					
+					
+				//Primary Account owner Text Box hover                                           
+					public static WebElement txbx_PrimAcc(WebDriver driver) throws InterruptedException{
+						 boolean PrimAcc = driver.findElement(By.xpath("//*[@id='new_primaryaccountowner']/div[1]")).isEnabled();
+							if (PrimAcc == true) {
+								WebElement element = driver.findElement(By.xpath("//*[@id='new_primaryaccountowner']/div[1]"));
+
+								Actions action = new Actions(driver);
+
+								action.moveToElement(element).build().perform();
+								action.click();
+
+								driver.findElement(By.xpath("//*[@id='new_primaryaccountowner']/div[1]")).click();
+								Thread.sleep(1000);
+								System.out.println("Step-2");			
+								Thread.sleep(2000);
+							} else 
+							{
+								System.out.println("object is not present");
+							}
+							return element;
+					      
+					    
+					}
+
+					//Primary Account owner Text Box 
+					public static WebElement hiddentxbx_PrimAcc(WebDriver driver) throws InterruptedException{
+						 
+							element = driver.findElement(By.id("new_primaryaccountowner_ledit"));;
+								Thread.sleep(2000);
+								return element;
+					
+					
 				
 }
 }
