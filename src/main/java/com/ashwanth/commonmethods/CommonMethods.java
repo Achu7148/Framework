@@ -300,7 +300,7 @@ public class CommonMethods {
 		 * 
 		 * @param driver
 		 * @param strTypeElementId
-		 * @code = The purpose of this method is used to click the element for checkbox
+		 * @code = The purpose of this method is used to click the element for Radio button
 		 * 
 		 */
 		public static void clickRadioButton_By_Id(WebDriver driver, String strLocatorElement) {
@@ -789,8 +789,7 @@ public class CommonMethods {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// The below method will save the screen shot in d drive with name
 		// "screenshot.png"
-		FileUtils.copyFile(scrFile,
-				new File("C:\\workspace\\qvsbatch1\\ScreenshotsFolder\\" + strTestscreenshotSteps + ".png"));
+		FileUtils.copyFile(scrFile, new File("C:\\workspace\\qvsbatch1\\ScreenshotsFolder\\" + strTestscreenshotSteps + ".png"));
 
 	}
 
