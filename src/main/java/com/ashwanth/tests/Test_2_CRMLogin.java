@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import com.ashwanth.commonmethods.CommonMethods;
 import com.ashwanth.pages.CRMLogin;
 import com.ashwanth.pages.FormSelection;
 import com.ashwanth.pages.ContactPage;
@@ -70,7 +68,7 @@ public class Test_2_CRMLogin {
 		
 		Thread.sleep(1000);
 		
-		ContactPage.txbx_AccName(driver).sendKeys("Ashwanthk");
+		ContactPage.txbx_AccName(driver).sendKeys("Ashwanthtwo");
 		
 		ContactPage.txtbx_CntryName(driver);
 		
@@ -121,6 +119,8 @@ public class Test_2_CRMLogin {
 		driver.switchTo().defaultContent();
 		
 		FormSelection.click_SaveandClose(driver).click();
+		
+		driver.quit();
 		
 	}
 }

@@ -4,7 +4,7 @@
  
 	<test name="CRM TEST">
 		<classes>
-			<class name="com.ashwanth.tests.Test_1_CRMLogin" /> 
+			<class name="com.ashwanth.tests.Test_2_CRMLogin" /> 
 			</classes>	
 	</test> 
 	
