@@ -4,14 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.ashwanth.commonmethods.CommonMethods;
-import com.ashwanth.pages.CRMLogin;
-import com.ashwanth.pages.FormSelection;
-import com.ashwanth.pages.ContactPage;
 
 public class Test_1_CRMLogin {
 
@@ -38,7 +33,7 @@ public class Test_1_CRMLogin {
 		
 		CommonMethods.click_By_Id(driver, "idSIButton9");
 		
-		CommonMethods.setSleep(100);
+		CommonMethods.setSleep(1000);
 		
 		CommonMethods.setText_By_Id(driver, "i0118", "Sensiple@2017");
 		
