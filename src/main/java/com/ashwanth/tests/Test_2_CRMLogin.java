@@ -68,7 +68,7 @@ public class Test_2_CRMLogin {
 		
 		Thread.sleep(1000);
 		
-		ContactPage.txbx_AccName(driver).sendKeys("Ashwanthtwo");
+		ContactPage.txbx_AccName(driver).sendKeys("Ashwanth kolappan");
 		
 		ContactPage.txtbx_CntryName(driver);
 		

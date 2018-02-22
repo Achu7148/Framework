@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.ashwanth.commonmethods.CommonMethods;
+import com.ashwanth.pages.CRMLogin;
 
 public class Test_1_CRMLogin {
 
@@ -37,7 +38,7 @@ public class Test_1_CRMLogin {
 		
 		CommonMethods.setText_By_Id(driver, "i0118", "Sensiple@2017");
 		
-		
+		//CRMLogin.txtbx_Password(driver).sendKeys("Sensiple@2017");
 	
 		
 		/*
