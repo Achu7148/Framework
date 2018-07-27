@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ashwanth.tests.Test_2_CRMLogin">
+      <class name="Ashwanth.Framework.chromebrowserlaunch">
         <methods>
+          <include name="Login2"/>
           <include name="Login"/>
-          <include name="Account_Page"/>
-          <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- com.ashwanth.tests.Test_2_CRMLogin -->
+      </class> <!-- Ashwanth.Framework.chromebrowserlaunch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
